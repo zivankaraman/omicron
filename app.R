@@ -3,6 +3,7 @@
 library(sf)
 library(markdown)
 library(ggplot2)
+library(lattice)
 
 library(shiny)
 library(shinycssloaders)
