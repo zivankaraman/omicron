@@ -72,8 +72,8 @@ names(deptList) <- deptList
 # define breaks and colors
 brks <- seq(0, 8000, by = 500)
 NFARBEN <- length(brks) - 1
-farben <- colorRampPalette(c('#fff5f0','#fee0d2','#fcbba1','#fc9272','#fb6a4a','#ef3b2c','#cb181d','#a50f15','#67000d'))(NFARBEN)
-farben7 <- c('#b2182b','#ef8a62','#fddbc7','#a7a7a7','#d1e5f0','#67a9cf','#2166ac')
+farben <- colorRampPalette(c("#fff5f0", "#fee0d2", "#fcbba1", "#fc9272", "#fb6a4a", "#ef3b2c", "#cb181d", "#a50f15", "#67000d"))(NFARBEN)
+farben7 <- c("#b2182b", "#ef8a62", "#fddbc7", "#a7a7a7", "#d1e5f0", "#67a9cf", "#2166ac")
 
 # caption and colors
 caption <- paste("Nombre quotidien de cas positifs pour 1 million d’habitants, en moyenne sur les 7 derniers jours.", 
@@ -136,7 +136,7 @@ ui <- navbarPage("Omicron wave in France", theme = shinytheme("lumen"),
                             )
                           )
                  ),
-                 tabPanel("By department", icon = icon('chart-line'),
+                 tabPanel("By department", icon = icon("chart-line"),
                           sidebarLayout(
                               sidebarPanel(width = 3,
                                            # Select the date
@@ -257,7 +257,7 @@ server <- function(input, output, session) {
           }
           DT::datatable(tmp, rownames = FALSE, 
                         options = list(pageLength = 20,
-                                       columnDefs = list(list(className = 'dt-right', targets = 2:3))
+                                       columnDefs = list(list(className = "dt-right", targets = 2:3))
                                        ))
     })
   
@@ -275,7 +275,7 @@ server <- function(input, output, session) {
         numCols <- 1:(ncol(tmp) - 1)
         DT::datatable(tmp, rownames = FALSE,
                       options = list(pageLength = 20,
-                                     columnDefs = list(list(className = 'dt-right', targets = numCols))
+                                     columnDefs = list(list(className = "dt-right", targets = numCols))
                       ))
     })
   
