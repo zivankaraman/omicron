@@ -41,3 +41,5 @@ vignettes/*.pdf
 # downloaded CSV file
 data/*.csv
 
+# Shinyapp deployment folder
+rsconnect/*
