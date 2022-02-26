@@ -42,4 +42,4 @@ vignettes/*.pdf
 data/*.csv
 
 # Shinyapp deployment folder
-rsconnect/*
+rsconnect/shinyapps.io/zivan-karaman/Omicron.dcf
