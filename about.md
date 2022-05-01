@@ -1,7 +1,6 @@
 ### About the data
 
-The application shows the spatio-temporal variations of the Omicron wave in metropolitan France. The data are from the SI-DEP public dataset:
-
+The application shows the spatio-temporal variations of the Omicron wave in metropolitan France. The data come from the SI-DEP public dataset:   
 <https://www.data.gouv.fr/en/datasets/donnees-relatives-aux-resultats-des-tests-virologiques-covid-19/>.
 
 Since the raw data display a strong cyclic weekly variation, it has been smoothed by computing the 7-days moving average.
@@ -11,4 +10,5 @@ Since the raw data display a strong cyclic weekly variation, it has been smoothe
 
 ### About the author
 
-Zivan is a freelance data science & software engineering consultant, passionate about using mathematics, statistics, and computing to transform the data into actionable insights that can help solve real-world problems. Particularly fond of the R ecosystem has been using it even before it was created (using R ancestor S/S+ since the early 90s). You can connect with him on LinkedIn <https://www.linkedin.com/in/zivankaraman/>.
+Zivan is freelance data science & software engineering consultant, passionate about using mathematics, statistics, and computing to transform the data into actionable insights that can help solve real-world problems. Particularly fond of the R ecosystem, has been using it even before it was created (using R ancestor S/S+ since the early 90s).   
+You can connect with him on LinkedIn <https://www.linkedin.com/in/zivankaraman/>.
