@@ -1,10 +1,6 @@
 app.R
 about.md
-about_en.md
-about_fr.md
 data/france7.rds
 data/sidep7.rds
 data/tab7.rds
 data/departements.rds
-data/dico.rds
-translations/translation_fr.csv

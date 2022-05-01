@@ -209,7 +209,7 @@ server <- function(input, output, session) {
                 tmp[, j] <- format(round(tmp[, j], 2), nsmall = 2, justify = "right")
             }
             DT::datatable(tmp, rownames = FALSE, 
-                          options = list(pageLength = 20,
+                          options = list(pageLength = 10,
                                          columnDefs = list(list(className = "dt-right", targets = 2:3))
                           ))
         })
@@ -226,7 +226,7 @@ server <- function(input, output, session) {
             }
             numCols <- 1:(ncol(tmp) - 1)
             DT::datatable(tmp, rownames = FALSE,
-                          options = list(pageLength = 20,
+                          options = list(pageLength = 10,
                                          columnDefs = list(list(className = "dt-right", targets = numCols))
                           ))
         })
