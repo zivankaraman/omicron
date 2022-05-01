@@ -137,7 +137,7 @@ ui <- fluidPage(
                    ),
                    tabPanel(title = "About",
                             fluidRow(
-                                column(6,
+                                column(8,
                                        includeMarkdown("about.md")
                                 ),
                             )
