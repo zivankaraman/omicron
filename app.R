@@ -24,7 +24,7 @@ FindDepartment <- function(obj) {
     return(ii)
 }
 
-plotxy <- function(mydata) {
+plotxy <- function(mydata, dday = NULL) {
     if (length(unique(mydata$dep)) == 1) {
         my.cex <- 1
     } else {
@@ -42,6 +42,9 @@ plotxy <- function(mydata) {
                lower <- mydata$zero[subscripts]
                panel.polygon(c(x, rev(x)), c(upper, rev(lower)),
                              col = "blue", alpha = 0.35, border = TRUE, lwd = 3, ...)
+               if (!is.null(dday)) {
+                   panel.abline(v = dday, lty = 3, col = "grey")
+               }
            })
 }
 
@@ -192,7 +195,7 @@ server <- function(input, output, session) {
     output$popup <- renderPlot({
         id <- FindDepartment(input$plotclick)
         mydata <- subset(dat7, dep == france7$code[id])
-        plotxy(mydata)
+        plotxy(mydata, dday = as.Date(input$date))
     })
     
     output$chart <- renderPlot({
