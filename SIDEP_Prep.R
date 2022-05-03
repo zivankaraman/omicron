@@ -50,6 +50,8 @@ dat3[, "dow"] <- lubridate::wday(dat3$date, week_start = 1)
 departements <- readRDS(file = "data/departements.rds")
 idx <- match(dat3$dep, departements$code)
 dat3$dept <- departements$dep[idx]
+# write the file
+saveRDS(dat3, "data/sidep7.rds")
 
 # read the map
 france <- readRDS(file = "data/map_france.rds")
@@ -60,11 +62,10 @@ dat7 <- readRDS(file = "data/sidep7.rds")
 # convert to wide format
 tab7 <- reshape(dat7[, c("dep", "date", "cpm7")], idvar = "dep", timevar = "date", direction = "wide")
 row.names(tab7) <- NULL
+# write the file
+saveRDS(tab7, "data/tab7.rds")
 
 # merge with map
 france7 <- merge(france, tab7, by.x = "code", by.y = "dep", all = TRUE)
-
-# write the files
-saveRDS(dat3, "data/sidep7.rds")
-saveRDS(tab7, "data/tab7.rds")
+# write the file
 saveRDS(france7, "data/france7.rds")
